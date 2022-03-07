@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charm&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: url(/assets/space4.jpg) center;
+  background-size: cover;
+    font-family: 'Orbitron', sans-serif;
+    color: rgb(255, 255, 255);
+  }
+  .container {
+    border: 1px solid #2d2d2d;
+    display: flex;
+    justify-content: center;
+  }
+  .facts {
+    text-align: center;
+    border: 1px solid  #2d2d2d;
+    font-size: 8pt;
+}
+.qf {
+    font-size: 18pt;
+}
+.back-container {
+  display: flex;
+  justify-content: center;
+}
+.back {
+  background-color: #233b52;
+  border-radius: 12px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+}
+.explore {
+  display: block;
+  padding: 12px 42px;
+  border-radius: 12px;
+  font-size: 1.25rem;
+  font-family: 'Orbitron', sans-serif;
+  background-color: rgb(11, 17, 36);
+  color: white;
+  transform: translateY(-6px);
+}
+
+.back:active .explore {
+  transform: translateY(-2px);
+}
+.end-note {
+  font-family: 'Charm', cursive;
+  text-align: center;
+  margin: 10px 10px;
+}
+  .earth {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    width: 600px;
+    height: 600px;
+    background: url(/assets/neptunesurface.jpg);
+    border-radius: 50%;
+    background-size: 1610px;
+    box-shadow: inset 8px 36px 80px 36px rgb(0, 0, 0), inset -6px 0 12px 4px rgba(255, 255, 255, 0.3);
+    animation-name: rotate;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    -webkit-animation-name: rotate;
+   -webkit-animation-duration: infinite;
+   -webkit-animation-iteration-count: infinite;
+   -webkit-animation-timing-function: linear;
+  }
+  @keyframes rotate {
+    from {
+      background-position: 0px 0px;
+    }
+    to {
+      background-position: 10000px 0px;
+    }
+  }
+  @-webkit-keyframes rotate {
+    from {
+      background-position: 0px 0px;
+    }
+    to {
+      background-position: 610px 0px;
+    }
+  }
+  a {
+    color: rgb(255, 255, 255);
+  }
+  
+  .header {
+    background-color: rgb(0, 0, 0);
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    
+  }
+  
+  .header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+  }
+  
+  .header li a {
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #4a86be;
+    text-decoration: none;
+  }
+  
+  .header li a:hover,
+  .header .menu-btn:hover {
+    transform: scale(.9);
+    transition: transform 1.5s ease, opacity .7s ease-out;
+    background-color: #3c4a9b;
+  }
+  
+  .header .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+  }
+  
+  
+  .header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height 1s ease-out;
+  }
+  
+  .header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+  }
+  
+  .header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transform: 1.5 ease, opacity .7s ease;
+    width: 18px;
+  }
+  
+  .header .menu-icon .navicon:before,
+  .header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  .header .menu-icon .navicon:before {
+    top: 5px;
+  }
+  
+  .header .menu-icon .navicon:after {
+    top: -5px;
+  }
+  
+  .header .menu-btn {
+    display: none;
+  }
+  
+  .header .menu-btn:checked ~ .menu {
+    max-height: 240px;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+  .condesc {
+    text-align: center;
+    margin: 50px 50px;
+}
+.heading {
+  font-size: 30pt;
+}
+  
+  @media screen and ( min-width:40px ) and ( max-width: 359px ) {
+    .header .logo {
+        display: flex;
+        float: left;
+        font-size: 15pt;
+        padding: 20px 20px;
+        text-decoration: none;
+    }
+   .earth {
+    margin-top: 150px;
+    margin-bottom: 100px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-size: 400px;
+    box-shadow: inset 8px 36px 80px 36px rgb(0, 0, 0), inset -6px 0 12px 4px rgba(255, 255, 255, 0.3);
+    animation-name: rotate;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    -webkit-animation-name: rotate;
+   -webkit-animation-duration: infinite;
+   -webkit-animation-iteration-count: infinite;
+   -webkit-animation-timing-function: linear;
+   }
+}
+@media (min-width: 48em) {
+    .header li {
+      float: left;
+    }
+    .header li a {
+      padding: 20px 30px;
+    }
+    .header .menu {
+      clear: none;
+      float: right;
+      max-height: none;
+    }
+    .header .menu-icon {
+      display: none;
+    }
+  }
+  @media screen and ( min-width:360px ) and ( max-width: 1024px ) {
+    .header .logo {
+        display: flex;
+        float: left;
+        font-size: 20pt;
+        padding: 10px 20px;
+        text-decoration: none;
+    }
+   .earth {
+    margin-top: 150px;
+    margin-bottom: 100px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-size: 600px;
+    box-shadow: inset 8px 36px 80px 36px rgb(0, 0, 0), inset -6px 0 12px 4px rgba(255, 255, 255, 0.3);
+    animation-name: rotate;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    -webkit-animation-name: rotate;
+   -webkit-animation-duration: infinite;
+   -webkit-animation-iteration-count: infinite;
+   -webkit-animation-timing-function: linear;
+   }
+}
+@media (min-width: 48em) {
+    
+    .header li {
+      float: left;
+    }
+    .header li a {
+      padding: 20px 30px;
+    }
+    .header .menu {
+      clear: none;
+      float: right;
+      max-height: none;
+    }
+    .header .menu-icon {
+      display: none;
+    }
+  }
